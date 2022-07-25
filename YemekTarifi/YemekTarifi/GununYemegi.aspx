@@ -1,40 +1,48 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Kullanici.master" AutoEventWireup="true" CodeFile="GununYemegi.aspx.cs" Inherits="GununYemegi" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
+        .auto-style7 {
+            font-size: x-large;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <table class="auto-style1">
-        <tr>
-            <td>
-                <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-                <br />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style5">
-                <asp:Image ID="Image1" runat="server" Height="167px" Width="314px" />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Puan :
-                <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Tarih :
-                <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
-            </td>
-        </tr>
-    </table>
+    <asp:DataList ID="DataList3" runat="server">
+        <ItemTemplate>
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style5"><strong>
+                        <asp:Label ID="Label15" runat="server" CssClass="auto-style7" Text='<%# Eval("GYAd") %>'></asp:Label>
+                        </strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Malzeme :</strong>
+                        <asp:Label ID="Label16" runat="server" Text='<%# Eval("GYMalzeme") %>'></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Tarif :</strong>
+                        <asp:Label ID="Label17" runat="server" Text='<%# Eval("GYTarif") %>'></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Puan :</strong>
+                        <asp:Label ID="Label18" runat="server" Text='<%# Eval("GYPuan") %>'></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Tarih :</strong>
+                        <asp:Label ID="Label19" runat="server" Text='<%# Eval("GYTarih") %>'></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">
+                        <asp:Image ID="Image3" runat="server" Height="150px" ImageUrl="~/pictures/dolmayemek.jpg" Width="200px" />
+                    </td>
+                </tr>
+            </table>
+        </ItemTemplate>
+    </asp:DataList>
 </asp:Content>
 

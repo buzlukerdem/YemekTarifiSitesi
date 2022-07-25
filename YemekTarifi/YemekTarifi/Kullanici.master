@@ -50,9 +50,11 @@
         <div style="margin-top: 20px; margin-left: 300px; width: 700px; height: 400px; background-color: white;">
             <div style="float: left; height: auto; width: 200px; background-color: cadetblue;" class="auto-style3">
                 <div class="auto-style5">
-                    <strong>KATEGORİLER</strong><br />
+                    <strong><span class="auto-style4">KATEGORİLER</span></strong><br />
                         <br />
                 </div>
+               
+                <strong>
                
                 <asp:DataList ID="DataList1" runat="server" CssClass="auto-style4" Width="200px">
                     <ItemTemplate>
@@ -63,7 +65,6 @@
                         </div>
                     </ItemTemplate>
                 </asp:DataList>
-                <strong>
                     <br />
                 </strong>
             </div>
