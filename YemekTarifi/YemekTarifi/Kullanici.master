@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
+    <link href="Kullanıcı.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
@@ -13,7 +14,7 @@
         }
 
         .auto-style2 {
-            color: #FFFFFF;
+            color: #000000;
         }
 
         .auto-style3 {
@@ -27,23 +28,30 @@
         .auto-style5 {
             text-align: center;
         }
+
         .auto-style6 {
             width: 135px;
             text-align: center;
+        }
+
+        .auto-style7 {
+            text-align: center;
+            width: 130px;
+            color: #000000;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="height: 150px; width: 700px; margin-left: 300px; background-color: cadetblue;"></div>
-        <div style="margin-top: 20px; margin-left: 300px; width: 700px; height: 25px; background-color: cadetblue; font-weight: 700;">
+        <div style="border: thin solid #FFFFFF; height: 150px; width: 700px; margin-left: 300px; background-color: cadetblue;"></div>
+        <div style="margin-top: 20px; margin-left: 300px; width: 700px; height: 25px; background-color: #FFF; font-weight: 700;">
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style5"><a href="AnaSayfa.aspx"><span class="auto-style2">ANA SAYFA</span></a></td>
-                    <td class="auto-style5"><a href="GununYemegi.aspx"><span class="auto-style2">GÜNÜN YEMEĞİ</span></a></td>
-                    <td class="auto-style6"><a href="TarifOner.aspx"><span class="auto-style2">TARİF ÖNER</span></a></td>
-                    <td class="auto-style5"><a href="Iletisim.aspx"><span class="auto-style2">İLETİŞİM</span></a></td>
-                    <td class="auto-style5"><a href="Hakkimizda.aspx"><span class="auto-style2">HAKKIMIZDA</span></a></td>
+                    <td style="background-color: cadetblue" class="auto-style5"><a href="AnaSayfa.aspx"><span class="auto-style2">ANA SAYFA</span></a></td>
+                    <td style="background-color: cadetblue" class="auto-style5"><a href="GununYemegi.aspx"><span class="auto-style2">GÜNÜN YEMEĞİ</span></a></td>
+                    <td style="background-color: cadetblue" class="auto-style5"><a href="TarifOner.aspx"><span class="auto-style2">TARİF ÖNER</span></a></td>
+                    <td style="background-color: cadetblue" class="auto-style5"><a href="Iletisim.aspx"><span class="auto-style2">İLETİŞİM</span></a></td>
+                    <td style="background-color: cadetblue" class="auto-style5"><a href="Hakkimizda.aspx"><span class="auto-style2">HAKKIMIZDA</span></a></td>
                 </tr>
             </table>
         </div>
@@ -51,20 +59,20 @@
             <div style="float: left; height: auto; width: 200px; background-color: cadetblue;" class="auto-style3">
                 <div class="auto-style5">
                     <strong><span class="auto-style4">KATEGORİLER</span></strong><br />
-                        <br />
+                    <br />
                 </div>
-               
+
                 <strong>
-               
-                <asp:DataList ID="DataList1" runat="server" CssClass="auto-style4" Width="200px">
-                    <ItemTemplate>
-                        <div style="border: thin solid #000000">
-                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAd") %>'></asp:Label>
-                            &nbsp;-
+
+                    <asp:DataList ID="DataList1" runat="server" CssClass="auto-style4" Width="200px">
+                        <ItemTemplate>
+                            <div style="border: thin solid #000000">
+                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAd") %>'></asp:Label>
+                                &nbsp;-
                             <asp:Label ID="Label2" runat="server" Text='<%# Eval("KategoriAdet") %>'></asp:Label>
-                        </div>
-                    </ItemTemplate>
-                </asp:DataList>
+                            </div>
+                        </ItemTemplate>
+                    </asp:DataList>
                     <br />
                 </strong>
             </div>
