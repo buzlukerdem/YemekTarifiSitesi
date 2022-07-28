@@ -1,6 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Kullanici.master" AutoEventWireup="true" CodeFile="AnaSayfa.aspx.cs" Inherits="AnaSayfa" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
+    .auto-style7 {
+        font-size: large;
+        color: #000000;
+    }
+        .auto-style9 {
+            font-size: 18px;
+            color: #000000;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <p>
@@ -11,7 +21,7 @@
                         <td><strong>
 
 
-                            <a href="YemekDetay.aspx?YemekID=<%#Eval("YemekID")%>"><asp:Label ID="Label3" runat="server" CssClass="auto-style4" Text='<%# Eval("YemekAd") %>'></asp:Label></a>
+                            <a href="YemekDetay.aspx?YemekID=<%#Eval("YemekID")%>"><asp:Label ID="Label3" runat="server" CssClass="auto-style9" Text='<%# Eval("YemekAd") %>'></asp:Label></a>
                         
                         
                         </strong></td>

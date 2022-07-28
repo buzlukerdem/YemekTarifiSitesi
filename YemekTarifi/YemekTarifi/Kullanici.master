@@ -19,6 +19,9 @@
 
         .auto-style3 {
             text-align: left;
+            float: left;
+            height: auto;
+            width: 197px;
         }
 
         .auto-style4 {
@@ -30,20 +33,22 @@
         }
 
         .auto-style6 {
-            width: 135px;
-            text-align: center;
+            font-size: medium;
         }
-
         .auto-style7 {
-            text-align: center;
-            width: 130px;
             color: #000000;
+            font-size: 16px;
+        }
+        .auto-style8 {
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="border: thin solid #FFFFFF; height: 150px; width: 700px; margin-left: 300px; background-color: cadetblue;"></div>
+        <div style="border: thin solid #FFFFFF; height: 150px; width: 700px; margin-left: 300px; background-color: cadetblue;">
+            <asp:Image ID="Image1" runat="server" Height="149px" ImageUrl="~/pictures/iskenderyemek.jpg" Width="699px" />
+        </div>
         <div style="margin-top: 20px; margin-left: 300px; width: 700px; height: 25px; background-color: #FFF; font-weight: 700;">
             <table class="auto-style1">
                 <tr>
@@ -56,7 +61,7 @@
             </table>
         </div>
         <div style="margin-top: 20px; margin-left: 300px; width: 700px; height: 400px; background-color: white;">
-            <div style="float: left; height: auto; width: 200px; background-color: cadetblue;" class="auto-style3">
+            <div style="background-color: cadetblue;" class="auto-style3">
                 <div class="auto-style5">
                     <strong><span class="auto-style4">KATEGORİLER</span></strong><br />
                     <br />
@@ -67,9 +72,10 @@
                     <asp:DataList ID="DataList1" runat="server" CssClass="auto-style4" Width="200px">
                         <ItemTemplate>
                             <div style="border: thin solid #000000">
-                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAd") %>'></asp:Label>
-                                &nbsp;-
-                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("KategoriAdet") %>'></asp:Label>
+                                <a href="KategoriDetay.aspx?KategoriID=<%#Eval("KategoriID")%>"><asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAd") %>' CssClass="auto-style7"></asp:Label></a>
+                                <span class="auto-style6">&nbsp;-
+                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("KategoriAdet") %>' CssClass="auto-style8"></asp:Label>
+                                </span>
                             </div>
                         </ItemTemplate>
                     </asp:DataList>

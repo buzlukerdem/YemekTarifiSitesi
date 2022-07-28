@@ -41,5 +41,6 @@ public partial class YemekDetay : System.Web.UI.Page
         komutyorum.Parameters.AddWithValue("@g4", yemekid);
         komutyorum.ExecuteNonQuery();
         bgl.baglanti().Close();
+        Response.Write("Yorum Eklendi.");
     }
 }

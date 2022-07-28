@@ -19,31 +19,31 @@
     <tr>
         <td class="auto-style8">Ad - Soyad :</td>
         <td>
-            <asp:TextBox ID="TextBox1" runat="server" CssClass="tb5" Width="250px"></asp:TextBox>
+            <asp:TextBox ID="txtadsoyad" runat="server" CssClass="tb5" Width="250px"></asp:TextBox>
         </td>
     </tr>
     <tr>
         <td class="auto-style8">Mail Adresi :</td>
         <td>
-            <asp:TextBox ID="TextBox2" runat="server" CssClass="tb5" Width="250px"></asp:TextBox>
+            <asp:TextBox ID="txtmailadres" runat="server" CssClass="tb5" Width="250px"></asp:TextBox>
         </td>
     </tr>
     <tr>
         <td class="auto-style8">Konu : </td>
         <td>
-            <asp:TextBox ID="TextBox3" runat="server" CssClass="tb5" Width="250px"></asp:TextBox>
+            <asp:TextBox ID="txtbaslik" runat="server" CssClass="tb5" Width="250px"></asp:TextBox>
         </td>
     </tr>
     <tr>
         <td class="auto-style8">Mesaj : </td>
         <td>
-            <asp:TextBox ID="TextBox4" runat="server" CssClass="tb5" Height="150px" TextMode="MultiLine" Width="250px"></asp:TextBox>
+            <asp:TextBox ID="txtmesajicerik" runat="server" CssClass="tb5" Height="150px" TextMode="MultiLine" Width="250px"></asp:TextBox>
         </td>
     </tr>
     <tr>
         <td>&nbsp;</td>
         <td>
-            <asp:Button ID="Button1" runat="server" Height="40px" Text="Gönder" Width="100px" />
+            <asp:Button ID="btngonder" runat="server" Height="40px" Text="Gönder" Width="100px" OnClick="Button1_Click" />
         </td>
     </tr>
 </table>
