@@ -55,6 +55,10 @@
             text-align: center;
             width: 342px;
         }
+    .auto-style25 {
+        border: 2px solid #456879;
+        border-radius: 10px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -113,7 +117,7 @@
             <tr>
                 <td class="auto-style22">YEMEK AD : </td>
                 <td class="auto-style23">
-                    <asp:TextBox ID="txtyemekad" runat="server" CssClass="tb5"></asp:TextBox>
+                    <asp:TextBox ID="txtyemekad" runat="server" CssClass="auto-style25" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>

@@ -13,32 +13,32 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style5"><strong>
-                        <asp:Label ID="Label15" runat="server" CssClass="auto-style7" Text='<%# Eval("GYAd") %>'></asp:Label>
+                        <asp:Label ID="Label15" runat="server" CssClass="auto-style7" Text='<%# Eval("YemekAd") %>'></asp:Label>
                         </strong></td>
                 </tr>
                 <tr>
                     <td><strong>Malzeme :</strong>
-                        <asp:Label ID="Label16" runat="server" Text='<%# Eval("GYMalzeme") %>'></asp:Label>
+                        <asp:Label ID="Label16" runat="server" Text='<%# Eval("YemekMalzeme") %>'></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td><strong>Tarif :</strong>
-                        <asp:Label ID="Label17" runat="server" Text='<%# Eval("GYTarif") %>'></asp:Label>
+                        <asp:Label ID="Label17" runat="server" Text='<%# Eval("YemekTarif") %>'></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td><strong>Puan :</strong>
-                        <asp:Label ID="Label18" runat="server" Text='<%# Eval("GYPuan") %>'></asp:Label>
+                        <asp:Label ID="Label18" runat="server" Text='<%# Eval("YemekPuan") %>'></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td><strong>Tarih :</strong>
-                        <asp:Label ID="Label19" runat="server" Text='<%# Eval("GYTarih") %>'></asp:Label>
+                        <asp:Label ID="Label19" runat="server" Text='<%# Eval("YemekTarih") %>'></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">
-                        <asp:Image ID="Image3" runat="server" Height="150px" ImageUrl="~/pictures/dolmayemek.jpg" Width="200px" />
+                        <asp:Image ID="Image3" runat="server" Height="150px" ImageUrl='<%# Eval("YemekResim") %>' Width="200px" />
                     </td>
                 </tr>
             </table>

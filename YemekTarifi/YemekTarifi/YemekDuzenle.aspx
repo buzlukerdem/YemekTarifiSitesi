@@ -56,16 +56,28 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style15">KATEGORI :</td>
-            <td class="auto-style17">
+            <td class="auto-style18">KATEGORI :</td>
+            <td class="auto-style19">
                 <asp:DropDownList ID="DropDownList1" runat="server" Width="250px">
                 </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style15"><strong>RESİM :</strong></td>
+            <td class="auto-style20">
+                <asp:FileUpload ID="FileUpload1" runat="server" Width="250px" />
             </td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style20">
                 <asp:Button ID="btnguncelle" runat="server" CssClass="auto-style14" Text="GÜNCELLE" OnClick="btnguncelle_Click" />
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style20">
+                <asp:Button ID="Button1" runat="server" CssClass="auto-style14" Text="Günün Yemeği Olarak Seç" Width="249px" OnClick="Button1_Click" />
             </td>
         </tr>
     </table>

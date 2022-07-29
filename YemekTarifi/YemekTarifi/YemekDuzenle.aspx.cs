@@ -43,13 +43,30 @@ public partial class YemekDuzenle : System.Web.UI.Page
 
     protected void btnguncelle_Click(object sender, EventArgs e)
     {
-        SqlCommand komutg = new SqlCommand("UPDATE Tbl_Yemekler set YemekAd=@p1, YemekMalzeme=@p2, YemekTarif=@p3, KategoriID=@p4 WHERE YemekID=@p5", bgl.baglanti());
+        FileUpload1.SaveAs(Server.MapPath("/pictures/" + FileUpload1.FileName));
+
+        SqlCommand komutg = new SqlCommand("UPDATE Tbl_Yemekler set YemekAd=@p1, YemekMalzeme=@p2, YemekTarif=@p3, KategoriID=@p4, YemekResim=@p6 WHERE YemekID=@p5", bgl.baglanti());
         komutg.Parameters.AddWithValue("@p1", txtYemekAd.Text);
         komutg.Parameters.AddWithValue("@p2", txtMalzeme.Text);
         komutg.Parameters.AddWithValue("@p3", txtTarif.Text);
         komutg.Parameters.AddWithValue("@p4", DropDownList1.SelectedValue);
+        komutg.Parameters.AddWithValue("@p6", "~/pictures/" + FileUpload1.FileName);
         komutg.Parameters.AddWithValue("@p5", Convert.ToInt32(id));
         komutg.ExecuteNonQuery();
+        bgl.baglanti().Close();
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        // durumları 0 lama
+        SqlCommand komuts = new SqlCommand("UPDATE Tbl_Yemekler set Durum=0",bgl.baglanti());
+        komuts.ExecuteNonQuery();
+        bgl.baglanti().Close();
+
+        // id ye göre günün yemegi seçme
+        SqlCommand komut2 = new SqlCommand("UPDATE Tbl_Yemekler set Durum=1 WHERE YemekID=@p1",bgl.baglanti());
+        komut2.Parameters.AddWithValue("@p1",Convert.ToInt32(id));
+        komut2.ExecuteNonQuery();
         bgl.baglanti().Close();
     }
 }

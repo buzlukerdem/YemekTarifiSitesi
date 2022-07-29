@@ -11,7 +11,7 @@ public partial class GununYemegi : System.Web.UI.Page
     sqlConnection bgl = new sqlConnection();
     protected void Page_Load(object sender, EventArgs e)
     {
-        SqlCommand komut = new SqlCommand("SELECT * FROM Tbl_GY", bgl.baglanti());
+        SqlCommand komut = new SqlCommand("SELECT * FROM Tbl_Yemekler WHERE Durum=1", bgl.baglanti());
         SqlDataReader dr = komut.ExecuteReader();
         DataList3.DataSource = dr;
         DataList3.DataBind();

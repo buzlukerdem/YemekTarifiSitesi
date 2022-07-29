@@ -44,7 +44,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
+                        <td>&nbsp;<asp:Image ID="Image2" runat="server" Height="200px" ImageUrl='<%# Eval("YemekResim") %>' Width="407px" />
+                        </td>
                     </tr>
                 </table>
             </ItemTemplate>

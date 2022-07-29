@@ -67,13 +67,10 @@
                         <td class="auto-style12" style="border: medium solid #000000;"><a href="Yorumlar.aspx"><span class="auto-style11">YORUMLAR</span></a></td>
                     </tr>
                     <tr>
-                        <td class="auto-style12" style="border: medium solid #000000;">MESAJLAR</td>
+                        <td class="auto-style12" style="border: medium solid #000000;"><a href ="Mesajlar.aspx"><span class="auto-style11">MESAJLAR</span></a></td>
                     </tr>
                     <tr>
-                        <td class="auto-style12" style="border: medium solid #000000;">GÜNÜN YEMEĞİ</td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style12" style="border: medium solid #000000;">ÖNERİLER</td>
+                        <td class="auto-style12" style="border: medium solid #000000;"><a href ="Tarifler.aspx"><span class="auto-style11">ÖNERİLER</span></a></td>
                     </tr>
                     <tr>
                         <td class="auto-style12" style="border: medium solid #000000;">HAKKIMIZDA</td>
